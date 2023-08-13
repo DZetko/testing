@@ -5,9 +5,11 @@ import { ReactComponent as Close } from '../../../assets/icons/close.svg';
 import { ListEntryProps } from "./ListEntryInterface";
 import { memo } from "react";
 
-// Note for reviewer: If there was more time, it would definitely be benefitial to focus on tyding up the props list
+// Notes for the reviewer:
+// 1. If there was more time, it would definitely be benefitial to focus on tyding up the props list
 // The component tree might be redone in a way that it is not necessary to pass down the list of unfolded and deleted ids
-// Also, just as I control the (un)folding of rows and deletion with a separate field, it might be possible to enrich the original data structure with folded and deleted flags
+// 2. Furthermore, just as I control the (un)folding of rows and deletion with a separate field, it might be possible to enrich the original data structure with folded and deleted flags
+
 export const ListEntry = ({ entry, toggleFold, deleteItem, unfoldedIds, deletedIds, isUnfolded }: ListEntryProps) => {
     const records = Object.values(entry.children).map((child) => child.records[0]);
     if (deletedIds.includes(entry.data.uniqueId)) return null;
