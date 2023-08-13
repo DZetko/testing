@@ -1,0 +1,45 @@
+
+html {
+    font-size: 12px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.row svg {
+    width: 16px;
+    height: 16px;
+}
+
+.row__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.row__item-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: cyan;
+    height: 20px;
+}
+
+.row__item-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    height: 50px;
+
+    background-color: lightgrey;
+}
+
+.row__item-bottom svg {
+    width: 16px;
+    height: 16px;
+}
